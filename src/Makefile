@@ -1,11 +1,11 @@
 
 EXEC=rastertotpcl
-CFLAGS != cups-config --cflags
-LDFLAGS != cups-config --ldflags
-LDLIBS != cups-config --image --libs
-CUPSDATADIR != cups-config --datadir
+CFLAGS=`cups-config --cflags`
+LDFLAGS=`cups-config --ldflags`
+LDLIBS=`cups-config --image --libs`
+CUPSDATADIR=`cups-config --datadir`
 PPDPATH=${CUPSDATADIR}/model
-CUPSDIR !=cups-config --serverbin
+CUPSDIR=`cups-config --serverbin`
 
 all: rastertotpcl ppd
 
